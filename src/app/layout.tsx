@@ -1,10 +1,8 @@
 import "./globals.css";
-
 export const metadata = {
   title: "Trader Kachi",
   description: "Elite Forex Mentorship Nigeria"
-};
-
+}
 export default function RootLayout({
   children
 }: {
