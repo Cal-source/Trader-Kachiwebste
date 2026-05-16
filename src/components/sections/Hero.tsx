@@ -5,7 +5,7 @@ export default function Hero() {
         <h1 className="text-5xl md:text-6xl font-bold leading-tight">
           Master Forex Trading with a Proven System
         </h1>
-
+className="bg-green-500 px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
         <p className="text-gray-300 mt-6 text-lg">
           Join Trader Kachi mentorship and learn how to trade consistently with structure, risk management, and real market strategy.
         </p>
