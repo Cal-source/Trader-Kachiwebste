@@ -1,9 +1,15 @@
+import Hero from "@/components/sections/Hero";
+import Services from "@/components/sections/Services";
+import Testimonials from "@/components/sections/Testimonials";
+import CTA from "@/components/sections/CTA";
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <h1 className="text-5xl font-bold">
-        Trader Kachi
-      </h1>
-    </main>
+    <>
+      <Hero />
+      <Services />
+      <Testimonials />
+      <CTA />
+    </>
   );
 }
