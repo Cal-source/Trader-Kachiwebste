@@ -1,3 +1,4 @@
+import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Stats from "@/components/sections/Stats";
 import Problem from "@/components/sections/Problem";
@@ -8,6 +9,7 @@ import CTA from "@/components/sections/CTA";
 export default function Home() {
   return (
     <>
+      <Navbar />
       <Hero />
       <Stats />
       <Problem />
