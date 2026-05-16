@@ -5,7 +5,7 @@ import Problem from "@/components/sections/Problem";
 import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
 import CTA from "@/components/sections/CTA";
-
+import Footer from "@/components/layout/Footer";
 export default function Home() {
   return (
     <>
@@ -16,6 +16,7 @@ export default function Home() {
       <Services />
       <Testimonials />
       <CTA />
+      <Footer />
     </>
   );
 }
