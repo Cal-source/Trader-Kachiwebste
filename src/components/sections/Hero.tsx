@@ -1,25 +1,25 @@
-import Image from "next/image";
-
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
-      <Image
-        src="/logo.png"
-        alt="Trader Kachi Logo"
-        width={120}
-        height={120}
-        className="mb-6"
-      />
+    <section className="min-h-screen flex items-center justify-center text-center px-6">
+      <div className="max-w-3xl">
+        <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+          Master Forex Trading with a Proven System
+        </h1>
 
-      <h1 className="text-5xl font-bold">Master Forex. Build Wealth.</h1>
+        <p className="text-gray-300 mt-6 text-lg">
+          Join Trader Kachi mentorship and learn how to trade consistently with structure, risk management, and real market strategy.
+        </p>
 
-      <p className="text-gray-400 mt-4 max-w-xl">
-        Join Trader Kachi elite trading mentorship and community.
-      </p>
+        <div className="mt-8 flex gap-4 justify-center">
+          <button className="bg-green-500 px-6 py-3 rounded-xl font-semibold">
+            Join Mentorship
+          </button>
 
-      <button className="mt-8 bg-primary hover:opacity-90 transition px-6 py-3 rounded-xl text-white font-semibold">
-        Join Community
-      </button>
+          <button className="border border-white/20 px-6 py-3 rounded-xl">
+            Watch Results
+          </button>
+        </div>
+      </div>
     </section>
   );
 }
