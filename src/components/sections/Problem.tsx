@@ -8,15 +8,15 @@ export default function Problem() {
         </h2>
 
         <p className="text-gray-300 mt-6 text-lg">
-          Most traders don’t fail because the market is impossible — they fail because they lack structure, discipline, and proper risk management.
+          Most traders don't fail because the market is impossible — they fail because they lack structure, discipline, and proper risk management.
         </p>
 
-        <div className="mt-10 space-y-4 text-gray-400">
-          <p>• They overtrade and lose control of emotions</p>
-          <p>• They chase signals without understanding strategy</p>
-          <p>• They risk too much on a single trade</p>
-          <p>• They never follow a consistent system</p>
-        </div>
+        <ul className="mt-10 space-y-4 text-gray-400 list-none">
+          <li>• They overtrade and lose control of emotions</li>
+          <li>• They chase signals without understanding strategy</li>
+          <li>• They risk too much on a single trade</li>
+          <li>• They never follow a consistent system</li>
+        </ul>
 
         <p className="mt-10 text-white font-semibold">
           If this sounds like you, you're not alone.
