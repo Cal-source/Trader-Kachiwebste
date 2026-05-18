@@ -11,7 +11,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         className="text-5xl md:text-6xl font-bold"
       >
-        Trade Smart. Build Wealth.
+        Trade Smarter. Build Real Wealth.
         <span className="text-primary"> Trader Kachi</span>
       </motion.h1>
 
