@@ -20,9 +20,9 @@ export default function Hero() {
       </p>
 
       <div className="mt-10 flex gap-4">
-        <button className="bg-primary px-6 py-3 rounded-xl">
-          Join Community
-        </button>
+        <button className="bg-[#16A34A] hover:bg-[#15803D] px-6 py-3 rounded-xl text-white transition">
+  Join Community
+</button>
 
         <button className="border border-white/20 px-6 py-3 rounded-xl">
           Learn More
