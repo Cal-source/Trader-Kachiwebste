@@ -11,7 +11,7 @@ export default function Hero() {
 
       <div className="relative max-w-6xl mx-auto">
 
-        {/* MAIN TITLE */}
+        {/* TITLE */}
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
           Trade Smarter. Build Wealth with{" "}
           <span className="text-primary">Trader Kachi</span>
@@ -23,7 +23,7 @@ export default function Hero() {
           and financial growth.
         </p>
 
-        {/* CTA BUTTONS */}
+        {/* CTA */}
         <div className="mt-10 flex flex-wrap justify-center gap-4">
 
           <Link
@@ -42,7 +42,7 @@ export default function Hero() {
 
         </div>
 
-        {/* MINI NAV CARDS */}
+        {/* NAV CARDS */}
         <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
 
           <Link href="/about" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
@@ -61,42 +61,6 @@ export default function Hero() {
           </Link>
 
           <Link href="/community" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
-            <p className="font-semibold">Community</p>
-            <p className="text-xs text-gray-400">Join traders</p>
-          </Link>
-
-        </div>
-
-      </div>
-    </section>
-  );
-}            href="/services"
-            className="border border-white/20 px-6 py-3 rounded-xl hover:bg-white/10 transition"
-          >
-            View Services
-          </Link>
-
-        </div>
-
-        {/* 🔥 MINI NAV BANNER CARDS */}
-        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
-
-          <Link href="/about" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
-            <p className="font-semibold">About</p>
-            <p className="text-xs text-gray-400">Our story</p>
-          </Link>
-
-          <Link href="/services" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
-            <p className="font-semibold">Services</p>
-            <p className="text-xs text-gray-400">What we offer</p>
-          </Link>
-
-          <Link href="/results" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
-            <p className="font-semibold">Results</p>
-            <p className="text-xs text-gray-400">Student wins</p>
-          </Link>
-
-          <Link href="/community" className="bg-primary px-6 py-3 rounded-xl font-medium transition-colors hover:bg-[#16A34A]"
             <p className="font-semibold">Community</p>
             <p className="text-xs text-gray-400">Join traders</p>
           </Link>
