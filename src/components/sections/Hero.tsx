@@ -28,13 +28,49 @@ export default function Hero() {
 
           <Link
             href="/community"
-            className="bg-primary px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
+            className="bg-primary px-6 py-3 rounded-xl font-medium transition-colors hover:bg-[#16A34A]"
           >
             Join Community
           </Link>
 
           <Link
             href="/services"
+            className="border border-white/20 px-6 py-3 rounded-xl transition-colors hover:bg-[#16A34A] hover:border-[#16A34A]"
+          >
+            View Services
+          </Link>
+
+        </div>
+
+        {/* MINI NAV CARDS */}
+        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+
+          <Link href="/about" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
+            <p className="font-semibold">About</p>
+            <p className="text-xs text-gray-400">Our story</p>
+          </Link>
+
+          <Link href="/services" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
+            <p className="font-semibold">Services</p>
+            <p className="text-xs text-gray-400">What we offer</p>
+          </Link>
+
+          <Link href="/results" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
+            <p className="font-semibold">Results</p>
+            <p className="text-xs text-gray-400">Student wins</p>
+          </Link>
+
+          <Link href="/community" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
+            <p className="font-semibold">Community</p>
+            <p className="text-xs text-gray-400">Join traders</p>
+          </Link>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}            href="/services"
             className="border border-white/20 px-6 py-3 rounded-xl hover:bg-white/10 transition"
           >
             View Services
