@@ -34,11 +34,12 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="/services"
-            className="border border-white/20 px-6 py-3 rounded-xl transition-colors hover:bg-[#16A34A] hover:border-[#16A34A]"
-          >
-            View Services
-          </Link>
+  href="/services"
+  className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]"
+>
+  <p className="font-semibold">Services</p>
+  <p className="text-xs text-gray-400">What we offer</p>
+</Link>
 
         </div>
 
