@@ -60,7 +60,7 @@ export default function Hero() {
             <p className="text-xs text-gray-400">Student wins</p>
           </Link>
 
-          <Link href="/community" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+          <Link href="/community" className="bg-primary px-6 py-3 rounded-xl font-medium transition-colors hover:bg-[#16A34A]"
             <p className="font-semibold">Community</p>
             <p className="text-xs text-gray-400">Join traders</p>
           </Link>
