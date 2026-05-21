@@ -45,10 +45,13 @@ export default function Hero() {
         {/* NAV CARDS */}
         <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
 
-          <Link href="/about" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
-            <p className="font-semibold">About</p>
-            <p className="text-xs text-gray-400">Our story</p>
-          </Link>
+          <Link
+  href="/about"
+  className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]"
+>
+  <p className="font-semibold">About</p>
+  <p className="text-xs text-gray-400">Our story</p>
+</Link>
 
           <Link href="/services" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
             <p className="font-semibold">Services</p>
