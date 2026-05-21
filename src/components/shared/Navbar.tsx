@@ -19,9 +19,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-primary">
-          Trader Kachi
-        </Link>
+        <Link href="/" className="text-lg md:text-xl font-bold text-primary">
+  Trader Kachi
+</Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
