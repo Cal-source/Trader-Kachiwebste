@@ -1,37 +1,93 @@
+"use client";
+
+import Link from "next/link";
+
 export default function CTA() {
   return (
-    <section id="cta" className="py-28 px-6 text-center">
-      <div className="max-w-4xl mx-auto p-10 rounded-3xl bg-gradient-to-br from-green-500/20 to-emerald-700/10 border border-green-500/20">
+    <section className="relative py-28 px-6 overflow-hidden">
 
-        <h2 className="text-5xl font-bold leading-tight">
-          Ready to Trade with Confidence?
-        </h2>
+      {/* BACKGROUND GLOW */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(22,163,74,0.18),transparent_65%)]" />
 
-        <p className="text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
-          Stop gambling in the markets. Learn a structured trading system, master risk management, and grow alongside serious traders inside Trader Kachi mentorship.
-        </p>
+      <div className="relative max-w-5xl mx-auto text-center rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl p-12 md:p-16">
 
-        <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center">
-
-          <button className="bg-green-500 hover:bg-green-400 transition px-8 py-4 rounded-2xl font-semibold text-lg">
-            Join Mentorship
-          </button>
-
-          <button className="border border-white/20 hover:bg-white/10 transition px-8 py-4 rounded-2xl text-lg">
-            View Student Results
-          </button>
-<a
-  href="https://wa.me/2347034627030"
-  target="_blank"
-  className="bg-green-500 px-8 py-4 rounded-2xl font-semibold"
->
-  Join on WhatsApp
-</a>
+        {/* SMALL TAG */}
+        <div className="inline-block px-4 py-2 rounded-full border border-[#16A34A]/30 bg-[#16A34A]/10 text-[#16A34A] text-sm font-medium mb-6">
+          Limited Mentorship Slots Available
         </div>
 
-        <p className="text-gray-500 mt-8 text-sm">
-          Limited mentorship slots available.
+        {/* MAIN HEADING */}
+        <h2 className="text-4xl md:text-6xl font-bold leading-tight">
+          Stop Trading Alone.
+          <br />
+          Start Winning With Structure.
+        </h2>
+
+        {/* SUBTEXT */}
+        <p className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
+          Join the Trader Kachi ecosystem and gain access to mentorship,
+          structured learning, market guidance, and a serious trading community.
         </p>
+
+        {/* BUTTONS */}
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+
+          <Link
+            href="/community"
+            className="bg-[#16A34A] px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20"
+          >
+            Join Community
+          </Link>
+
+          <Link
+            href="/services"
+            className="border border-white/20 px-8 py-4 rounded-2xl transition-all duration-300 hover:bg-[#16A34A] hover:border-[#16A34A]"
+          >
+            Explore Services
+          </Link>
+
+        </div>
+
+        {/* TRUST STATS */}
+        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+          <div>
+            <h3 className="text-2xl font-bold text-[#16A34A]">
+              500+
+            </h3>
+            <p className="text-sm text-gray-400 mt-1">
+              Traders Reached
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold text-[#16A34A]">
+              90%
+            </h3>
+            <p className="text-sm text-gray-400 mt-1">
+              Improved Discipline
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold text-[#16A34A]">
+              Daily
+            </h3>
+            <p className="text-sm text-gray-400 mt-1">
+              Market Analysis
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold text-[#16A34A]">
+              24/7
+            </h3>
+            <p className="text-sm text-gray-400 mt-1">
+              Community Support
+            </p>
+          </div>
+
+        </div>
 
       </div>
     </section>
