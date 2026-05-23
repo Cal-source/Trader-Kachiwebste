@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import Stats from "@/components/sections/Stats";
 import Problem from "@/components/sections/Problem";
 import Services from "@/components/sections/Services";
+import Results from "@/components/sections/Results";
 import Testimonials from "@/components/sections/Testimonials";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/layout/Footer";
