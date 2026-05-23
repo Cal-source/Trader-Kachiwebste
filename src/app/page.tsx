@@ -28,8 +28,7 @@ export default function Home() {
         {/* SERVICES */}
         <Services />
         
-        {/* RESULTS */}
-<Results />
+  
         
         {/* 🔥 NAVIGATION HUB (NEW SECTION ADDED) */}
         <section className="py-20 px-6 bg-black/30 border-y border-white/10">
@@ -68,6 +67,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* RESULTS */}
+<Results />
 
         {/* TESTIMONIALS */}
         <Testimonials />
