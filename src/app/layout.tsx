@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 
 export const metadata = {
   title: "Trader Kachi",
