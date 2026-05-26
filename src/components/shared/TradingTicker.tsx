@@ -79,5 +79,5 @@ export default function TradingTicker() {
 
   </div>
 );
-
+}
   
