@@ -26,6 +26,8 @@ export default function RootLayout({
 
         {/* FLOATING WHATSAPP BUTTON */}
         <WhatsAppButton />
+        
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async></script>
 
       </body>
     </html>
