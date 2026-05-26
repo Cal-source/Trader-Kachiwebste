@@ -39,7 +39,6 @@ export default function ServicesPage() {
 
   return (
     <main className="min-h-screen px-6 py-24">
-
       <div className="max-w-6xl mx-auto">
 
         {/* HERO */}
@@ -65,17 +64,14 @@ export default function ServicesPage() {
               className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 transition-all duration-300 hover:border-[#16A34A] hover:bg-[#16A34A]/10 hover:-translate-y-2"
             >
 
-              {/* TITLE */}
               <h2 className="text-2xl font-semibold mb-4">
                 {service.title}
               </h2>
 
-              {/* DESCRIPTION */}
               <p className="text-gray-400 leading-relaxed mb-6">
                 {service.description}
               </p>
 
-              {/* FEATURES */}
               <ul className="space-y-3 mb-8">
 
                 {service.features.map((feature, i) => (
@@ -83,4 +79,16 @@ export default function ServicesPage() {
                     key={i}
                     className="flex items-center gap-3 text-sm text-gray-300"
                   >
-                    <span className="w-
+                    <span className="w-2 h-2 rounded-full bg-[#16A34A]" />
+                    {feature}
+                  </li>
+                ))}
+
+              </ul>
+
+              <a
+                href="/community"
+                className="inline-block w-full text-center bg-[#16A34A] px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
+              >
+                Get Started
+              </
