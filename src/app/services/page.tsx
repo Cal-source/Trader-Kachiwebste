@@ -91,4 +91,29 @@ export default function ServicesPage() {
                 className="inline-block w-full text-center bg-[#16A34A] px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
               >
                 Get Started
-              </
+              </a>
+
+            </div>
+          ))}
+
+        </div>
+
+        {/* EXTRA SECTION */}
+        <section className="mt-24 text-center">
+
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Why Traders Choose Trader Kachi
+          </h2>
+
+          <p className="text-gray-400 mt-6 max-w-3xl mx-auto leading-relaxed">
+            We focus on long-term trader development instead of hype.
+            The goal is to create disciplined traders who understand structure,
+            manage risk correctly, and approach the market professionally.
+          </p>
+
+        </section>
+
+      </div>
+    </main>
+  );
+}
