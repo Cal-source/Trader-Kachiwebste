@@ -69,7 +69,7 @@ export default function CommunityPage() {
           </p>
 
           <a
-            href="https://wa.me/234XXXXXXXXXX"
+            href="https://wa.me/2347048284823"
             target="_blank"
             className="inline-block mt-8 bg-[#16A34A] px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-500/30"
           >
