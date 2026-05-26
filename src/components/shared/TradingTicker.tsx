@@ -54,7 +54,9 @@ export default function TradingTicker() {
 
     container.appendChild(script);
 
-  }, return (
+}, []);
+
+return (
   <div className="relative w-full overflow-hidden border-b border-[#16A34A]/20 bg-black/60 backdrop-blur-xl">
 
     {/* TOP GLOW LINE */}
