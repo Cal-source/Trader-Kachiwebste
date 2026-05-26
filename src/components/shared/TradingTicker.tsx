@@ -54,11 +54,30 @@ export default function TradingTicker() {
 
     container.appendChild(script);
 
-  }, []);
+  }, return (
+  <div className="relative w-full overflow-hidden border-b border-[#16A34A]/20 bg-black/60 backdrop-blur-xl">
 
-  return (
-    <div className="w-full border-b border-white/10 bg-black/40 backdrop-blur-xl overflow-hidden">
-      <div id="tradingview-widget" />
+    {/* TOP GLOW LINE */}
+    <div className="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#16A34A] to-transparent opacity-70" />
+
+    {/* LIVE MARKET TAG */}
+    <div className="absolute left-3 top-1/2 -translate-y-1/2 z-10 hidden md:flex items-center gap-2 bg-black/80 px-3 py-1 rounded-full border border-[#16A34A]/30">
+
+      <span className="w-2 h-2 rounded-full bg-[#16A34A] animate-pulse" />
+
+      <span className="text-xs text-[#16A34A] font-medium">
+        LIVE MARKET
+      </span>
+
     </div>
-  );
-}
+
+    {/* TICKER */}
+    <div
+      id="tradingview-widget"
+      className="pl-0 md:pl-36"
+    />
+
+  </div>
+);
+
+  
