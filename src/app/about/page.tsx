@@ -68,8 +68,12 @@ export default function AboutPage() {
           </h2>
 
           <a
-            href="/community"
-            className="inline-block mt-6 bg-[#16A34A] px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-red-500 hover:scale-105 hover:shadow-lg hover:shadow-green-500/30">
+            <a
+  href="/community"
+  className="inline-block mt-6 bg-[#16A34A] px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-green-600 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50 active:scale-95"
+>
+  Join Community
+</a>
             Join Community
           </a>
 
