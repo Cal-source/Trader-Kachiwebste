@@ -64,4 +64,4 @@ export default function Stats({ stats = defaultStats }: StatsProps) {
       </div>
     </section>
   );
-}
+      }
