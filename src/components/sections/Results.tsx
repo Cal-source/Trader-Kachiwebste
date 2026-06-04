@@ -81,7 +81,8 @@ export default function Results() {
               <p className="text-gray-400 mt-3">
                 {result.description}
               </p>
-              
+
+            </motion.div>
           ))}
 
         </div>
