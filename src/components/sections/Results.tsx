@@ -1,84 +1,93 @@
 "use client";
 
+import { motion } from "framer-motion";
+
+const results = [
+  {
+    title: "+12.4%",
+    subtitle: "Monthly Growth",
+    description:
+      "Consistent account growth through disciplined execution and risk management.",
+  },
+  {
+    title: "$500 → $2,100",
+    subtitle: "Account Scaling",
+    description:
+      "Members learning how to compound profits while protecting capital.",
+  },
+  {
+    title: "75% Win Rate",
+    subtitle: "Strategy Performance",
+    description:
+      "High-probability setups backed by structure and patience.",
+  },
+];
+
 export default function Results() {
-  const results = [
-    {
-      title: "Beginner to Consistent Trader",
-      detail: "Student went from zero knowledge to consistent monthly profits within 60 days.",
-      stat: "+48% growth",
-    },
-    {
-      title: "Risk Management Mastery",
-      detail: "Improved discipline and reduced emotional trading after mentorship.",
-      stat: "90% discipline rate",
-    },
-    {
-      title: "Signal Performance",
-      detail: "VIP signals delivered structured entries with clear risk control.",
-      stat: "High accuracy setups",
-    },
-  ];
-
   return (
-    <section className="py-24 px-6 bg-black/20 border-y border-white/10">
+    <section
+      id="results"
+      className="py-24 px-6 bg-gradient-to-b from-transparent to-white/[0.02]"
+    >
+      <div className="max-w-7xl mx-auto">
 
-      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <p className="text-[#16A34A] font-semibold uppercase tracking-widest">
+            Results
+          </p>
 
-        {/* HEADER */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Results That Speak
+          <h2 className="text-4xl md:text-5xl font-bold mt-4">
+            Proof Over Promises
           </h2>
 
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Real progress from traders inside the Trader Kachi ecosystem.
+          <p className="text-gray-400 max-w-2xl mx-auto mt-4">
+            Trading is about consistency, discipline, and execution.
+            Here are examples of the type of growth our community works toward.
           </p>
         </div>
 
-        {/* RESULTS GRID */}
+        {/* Cards */}
         <div className="grid md:grid-cols-3 gap-8">
 
-          {results.map((item, index) => (
-            <div
+          {results.map((result, index) => (
+            <motion.div
               key={index}
-              className="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 transition-all duration-300 hover:border-[#16A34A] hover:bg-[#16A34A]/10 hover:-translate-y-2"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.15,
+              }}
+              className="group rounded-3xl border border-white/10 bg-white/5 p-6 hover:border-[#16A34A]/40 hover:bg-white/10 transition-all duration-300"
             >
 
-              {/* BIG STAT */}
-              <div className="text-[#16A34A] text-2xl font-bold mb-4">
-                {item.stat}
+              {/* Screenshot Placeholder */}
+              <div className="aspect-video rounded-2xl bg-gradient-to-br from-[#16A34A]/20 to-transparent border border-[#16A34A]/20 flex items-center justify-center mb-6">
+                <span className="text-sm text-gray-400">
+                  Trading Result Screenshot
+                </span>
               </div>
 
-              {/* TITLE */}
-              <h3 className="text-xl font-semibold mb-3">
-                {item.title}
+              <div className="text-4xl font-bold text-[#16A34A]">
+                {result.title}
+              </div>
+
+              <h3 className="text-xl font-semibold mt-4">
+                {result.subtitle}
               </h3>
 
-              {/* DESCRIPTION */}
-              <p className="text-gray-400 leading-relaxed">
-                {item.detail}
+              <p className="text-gray-400 mt-3">
+                {result.description}
               </p>
 
-            </div>
+            </motion.div>
           ))}
 
-        </div>
-
-        {/* OPTIONAL CTA */}
-        <div className="text-center mt-14">
-          <p className="text-gray-400 mb-4">
-            Want results like this?
-          </p>
-
-          <a
-            href="/community"
-            className="inline-block bg-[#16A34A] px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
-          >
-            Join Community
-          </a>
         </div>
 
       </div>
     </section>
   );
-      }
+}
