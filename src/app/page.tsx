@@ -6,6 +6,7 @@ import Problem from "@/components/sections/Problem";
 import Services from "@/components/sections/Services";
 import Results from "@/components/sections/Results";
 import Testimonials from "@/components/sections/Testimonials";
+import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
@@ -76,7 +77,10 @@ export default function Home() {
 
         {/* TESTIMONIALS */}
         <Testimonials />
-
+        
+        {/* FAQ */}
+        <FAQ />
+        
         {/* CTA */}
         <CTA />
 
