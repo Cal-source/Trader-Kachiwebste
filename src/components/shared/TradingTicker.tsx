@@ -23,26 +23,19 @@ export default function TradingTicker() {
 
     script.innerHTML = JSON.stringify({
       symbols: [
-        {
-          proName: "FX:EURUSD",
-          title: "EUR/USD"
-        },
-        {
-          proName: "FX:GBPUSD",
-          title: "GBP/USD"
-        },
-        {
-          proName: "FX:USDJPY",
-          title: "USD/JPY"
-        },
-        {
-          proName: "BINANCE:BTCUSDT",
-          title: "BTC/USD"
-        },
-        {
-          proName: "BINANCE:ETHUSDT",
-          title: "ETH/USD"
-        }
+        
+          {
+  proName: "FOREXCOM:EURUSD",
+  title: "EUR/USD"
+},
+{
+  proName: "FOREXCOM:GBPUSD",
+  title: "GBP/USD"
+},
+{
+  proName: "FOREXCOM:USDJPY",
+  title: "USD/JPY"
+},
       ],
 
       showSymbolLogo: true,
