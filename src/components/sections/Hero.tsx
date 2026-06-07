@@ -1,75 +1,82 @@
 "use client";
 
-import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 px-6 text-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-6 bg-gradient-to-b from-black via-black to-black/95 overflow-hidden">
 
-      {/* BACKGROUND GLOW */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.15),transparent_60%)]" />
+      {/* Background Glow */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#16A34A]/20 blur-[150px] rounded-full" />
+      </div>
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-5xl mx-auto text-center">
 
-        {/* TITLE */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-          Trade Smarter. Build Wealth with{" "}
-          <span className="text-primary">Trader Kachi</span>
-        </h1>
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#16A34A]/30 bg-white/5 mb-6"
+        >
+          <span className="w-2 h-2 bg-[#16A34A] rounded-full animate-pulse" />
+          <span className="text-sm text-[#16A34A] font-medium">
+            Elite Trading Mentorship
+          </span>
+        </motion.div>
 
-        {/* SUBTITLE */}
-        <p className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
-          Join a disciplined trading ecosystem built for consistency, strategy,
-          and financial growth.
-        </p>
+        {/* Main Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-4xl md:text-6xl font-bold leading-tight"
+        >
+          Trade With Structure,{" "}
+          <span className="text-[#16A34A]">Discipline & Edge</span>
+        </motion.h1>
 
-        {/* CTA */}
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
+        {/* Subtext */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
+          className="mt-6 text-gray-400 text-lg max-w-2xl mx-auto"
+        >
+          Join a focused trading community built on strategy, risk management,
+          and consistency — not hype. Learn how real traders grow accounts sustainably.
+        </motion.p>
 
-          <Link
-            href="/community"
-            className="bg-primary px-6 py-3 rounded-xl font-medium transition-colors hover:bg-[#16A34A]"
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.7 }}
+          className="mt-10 flex flex-col md:flex-row gap-4 justify-center"
+        >
+
+          <a
+            href="#results"
+            className="px-6 py-3 rounded-xl bg-[#16A34A] text-black font-semibold hover:scale-105 transition"
+          >
+            View Results
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_NUMBER"
+            target="_blank"
+            className="px-6 py-3 rounded-xl border border-[#16A34A]/40 text-[#16A34A] hover:bg-[#16A34A]/10 transition"
           >
             Join Community
-          </Link>
+          </a>
 
-          <Link
-  href="/services"
-  className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]"
->
-  <p className="font-semibold">Services</p>
-  <p className="text-xs text-gray-400">What we offer</p>
-</Link>
+        </motion.div>
 
-        </div>
-
-        {/* NAV CARDS */}
-        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
-
-          <Link
-  href="/about"
-  className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]"
->
-  <p className="font-semibold">About</p>
-  <p className="text-xs text-gray-400">Our story</p>
-</Link>
-
-          <Link href="/services" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
-            <p className="font-semibold">Services</p>
-            <p className="text-xs text-gray-400">What we offer</p>
-          </Link>
-
-          <Link href="/results" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
-            <p className="font-semibold">Results</p>
-            <p className="text-xs text-gray-400">Student wins</p>
-          </Link>
-
-          <Link href="/community" className="p-4 rounded-xl bg-white/5 border border-white/10 transition hover:bg-[#16A34A]/20 hover:border-[#16A34A]">
-            <p className="font-semibold">Community</p>
-            <p className="text-xs text-gray-400">Join traders</p>
-          </Link>
-
-        </div>
+        {/* Trust Line */}
+        <p className="mt-8 text-sm text-gray-500">
+          Built for traders who want consistency, not gambling.
+        </p>
 
       </div>
     </section>
