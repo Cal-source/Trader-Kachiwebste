@@ -1,84 +1,103 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
     question: "Is Trader Kachi suitable for beginners?",
     answer:
-      "Yes. The system is built to guide beginners through structured trading, risk management, and discipline before advanced strategies."
+      "Yes. The system is designed to guide beginners through structured trading, risk management, and discipline before advanced strategies.",
   },
   {
-    question: "Do I need a large capital to start?",
+    question: "Do I need large capital to start?",
     answer:
-      "No. You can start small. The focus is on consistency and risk control, not large deposits."
+      "No. The focus is on consistency, risk control, and compounding — not large deposits.",
   },
   {
     question: "Is trading guaranteed to make profit?",
     answer:
-      "No trading is guaranteed. We focus on proper strategy, risk management, and long-term consistency to improve probability of success."
+      "No trading is guaranteed. We focus on strategy, discipline, and probability to improve long-term consistency.",
   },
   {
     question: "What do I get inside the community?",
     answer:
-      "You get market insights, trading guidance, strategy education, and a structured environment focused on growth and discipline."
+      "Market insights, structured education, trade breakdowns, and a disciplined trading environment.",
   },
   {
     question: "How is Trader Kachi different?",
     answer:
-      "We focus on structure, discipline, and process — not hype or gambling behavior. The goal is long-term trader development."
-  }
+      "We focus on structure, discipline, and process — not hype, signals addiction, or gambling behavior.",
+  },
 ];
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 px-6">
+    <section id="faq" className="bg-[#050505] text-white py-24 px-6">
       <div className="max-w-4xl mx-auto">
 
-        {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-[#16A34A] font-semibold uppercase tracking-widest">
+        {/* HEADER */}
+        <div className="text-center mb-14">
+
+          <p className="text-[#16A34A] text-sm uppercase tracking-widest mb-3">
             FAQ
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-4">
+          <h2 className="text-4xl md:text-5xl font-bold">
             Frequently Asked Questions
           </h2>
 
           <p className="text-gray-400 mt-4">
-            Everything you need to know before joining the community.
+            Clear answers before you join the system.
           </p>
+
         </div>
 
-        {/* FAQ Items */}
+        {/* FAQ LIST */}
         <div className="space-y-4">
+
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-white/10 rounded-2xl bg-white/5 overflow-hidden"
+              className="border border-white/10 rounded-2xl bg-[#0A0A0A] overflow-hidden hover:border-[#16A34A]/30 transition"
             >
+
               <button
                 onClick={() =>
                   setOpenIndex(openIndex === index ? null : index)
                 }
-                className="w-full text-left p-5 flex justify-between items-center hover:bg-white/10 transition"
+                className="w-full flex justify-between items-center p-5 text-left"
               >
-                <span className="font-medium">{faq.question}</span>
-                <span className="text-[#16A34A]">
+                <span className="font-medium">
+                  {faq.question}
+                </span>
+
+                <span className="text-[#16A34A] text-xl font-bold">
                   {openIndex === index ? "−" : "+"}
                 </span>
               </button>
 
-              {openIndex === index && (
-                <div className="p-5 pt-0 text-gray-400">
-                  {faq.answer}
-                </div>
-              )}
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="px-5 pb-5 text-gray-400 text-sm leading-relaxed"
+                  >
+                    {faq.answer}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
             </div>
           ))}
+
         </div>
+
       </div>
     </section>
   );
