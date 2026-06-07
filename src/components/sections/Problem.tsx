@@ -1,25 +1,90 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const problems = [
+  {
+    title: "No Clear Trading Structure",
+    description:
+      "Most traders enter the market without a defined system, leading to inconsistent results and emotional decisions.",
+  },
+  {
+    title: "Losing Due to Overtrading",
+    description:
+      "Chasing setups and revenge trading destroys accounts faster than bad strategies ever will.",
+  },
+  {
+    title: "No Risk Management Discipline",
+    description:
+      "Without proper risk control, even winning strategies eventually lead to blown accounts.",
+  },
+];
+
 export default function Problem() {
   return (
-    <section id="problem" className="py-24 px-6 text-center bg-red-500/5 border-y border-red-500/10">
-      <div className="max-w-3xl mx-auto">
+    <section className="bg-[#050505] text-white py-24 px-6">
+      <div className="max-w-6xl mx-auto text-center">
 
-        <h2 className="text-4xl font-bold">
-          Why Most Forex Traders Fail
-        </h2>
+        {/* Section Label */}
+        <motion.p
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-[#16A34A] text-sm uppercase tracking-widest mb-3"
+        >
+          The Problem
+        </motion.p>
 
-        <p className="text-gray-300 mt-6 text-lg">
-          Most traders don't fail because the market is impossible — they fail because they lack structure, discipline, and proper risk management.
-        </p>
+        {/* Title */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold mb-6"
+        >
+          Why Most Traders Stay Stuck
+        </motion.h2>
 
-        <ul className="mt-10 space-y-4 text-gray-400 list-none">
-          <li>• They overtrade and lose control of emotions</li>
-          <li>• They chase signals without understanding strategy</li>
-          <li>• They risk too much on a single trade</li>
-          <li>• They never follow a consistent system</li>
-        </ul>
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-gray-400 max-w-2xl mx-auto mb-14"
+        >
+          It’s not because trading is impossible — it’s because most traders
+          lack structure, discipline, and risk control.
+        </motion.p>
 
-        <p className="mt-10 text-white font-semibold">
-          If this sounds like you, you're not alone.
+        {/* Cards */}
+        <div className="grid md:grid-cols-3 gap-6 text-left">
+
+          {problems.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              className="bg-[#0A0A0A] border border-white/10 rounded-2xl p-6 hover:border-red-500/30 transition-all"
+            >
+
+              <h3 className="text-xl font-semibold mb-3">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-400 text-sm">
+                {item.description}
+              </p>
+
+            </motion.div>
+          ))}
+
+        </div>
+
+        {/* Closing Line */}
+        <p className="mt-14 text-gray-500 text-sm">
+          If this sounds familiar, you're not alone — but you are missing structure.
         </p>
 
       </div>
