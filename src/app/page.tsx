@@ -6,6 +6,7 @@ import Problem from "@/components/sections/Problem";
 import Services from "@/components/sections/Services";
 import Results from "@/components/sections/Results";
 import Testimonials from "@/components/sections/Testimonials";
+import FadeIn from "@/components/shared/FadeIn";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/layout/Footer";
@@ -38,6 +39,9 @@ export default function Home() {
 
         {/* TESTIMONIALS */}
         <Testimonials />
+        
+        {/* FadeIn */}
+      <FadeIn />
         
         {/* FAQ */}
         <FAQ />
