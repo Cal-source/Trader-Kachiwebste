@@ -20,35 +20,45 @@ export default function Home() {
       <TradingTicker />
 
       <main>
-
+<FadeIn> 
         {/* HERO */}
         <Hero />
-
-        {/* STATS */}
-        <Stats />
-
-        {/* PROBLEM */}
-        <Problem />
-
-        {/* SERVICES */}
-        <Services />
-                 
-
-        {/* RESULTS */}
-<Results />
-
-        {/* TESTIMONIALS */}
-        <Testimonials />
-        
-        <FadeIn>
-  <FAQ />
 </FadeIn>
         
+        <FadeIn>
+        {/* STATS */}
+        <Stats />
+          </FadeIn>
+<FadeIn>
+        {/* PROBLEM */}
+        <Problem />
+</FadeIn>
+        
+        <FadeIn>
+        {/* SERVICES */}
+        <Services />
+          </FadeIn>
+                 
+<FadeIn>
+        {/* RESULTS */}
+<Results />
+</FadeIn>
+        
+        <FadeIn>
+        {/* TESTIMONIALS */}
+        <Testimonials />
+          </FadeIn>
+        
+        
+        <FadeIn>
         {/* FAQ */}
         <FAQ />
-        
+          </FadeIn>
+
+        <FadeIn>
         {/* CTA */}
         <CTA />
+          </FadeIn>
 
         {/* FOOTER */}
         <Footer />
