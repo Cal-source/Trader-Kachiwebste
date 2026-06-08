@@ -40,7 +40,7 @@ export default function Home() {
         {/* TESTIMONIALS */}
         <Testimonials />
         
-        {/* FadeIn */}
+        {/* FADEIN */}
       <FadeIn />
         
         {/* FAQ */}
