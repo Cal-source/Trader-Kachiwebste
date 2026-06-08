@@ -1,7 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+<motion.div
+  animate={{
+    opacity: [0.3, 0.5, 0.3],
+  }}
+  transition={{
+    duration: 6,
+    repeat: Infinity,
+  }}
+  className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(22,163,74,0.18),transparent_65%)]"
+/>
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 bg-gradient-to-b from-black via-black to-black/95 overflow-hidden">
