@@ -40,8 +40,9 @@ export default function Home() {
         {/* TESTIMONIALS */}
         <Testimonials />
         
-        {/* FADEIN */}
-      <FadeIn />
+        <FadeIn>
+  <FAQ />
+</FadeIn>
         
         {/* FAQ */}
         <FAQ />
