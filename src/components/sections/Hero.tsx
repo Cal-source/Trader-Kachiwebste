@@ -1,35 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-<motion.div
-  animate={{
-    opacity: [0.3, 0.5, 0.3],
-  }}
-  transition={{
-    duration: 6,
-    repeat: Infinity,
-  }}
-  className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(22,163,74,0.18),transparent_65%)]"
-/>
+
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 bg-gradient-to-b from-black via-black to-black/95 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-6 bg-black overflow-hidden">
 
-      {/* Background Glow */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#16A34A]/20 blur-[150px] rounded-full" />
-      </div>
+      {/* BACKGROUND GLOW (ANIMATED) */}
+      <motion.div
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#16A34A]/20 blur-[160px] rounded-full"
+        animate={{
+          opacity: [0.3, 0.6, 0.3],
+          scale: [1, 1.05, 1],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
 
       <div className="relative max-w-5xl mx-auto text-center">
-        animate={{
-  opacity: [0.3, 0.5, 0.3],
-}}
-transition={{
-  duration: 6,
-  repeat: Infinity,
-}}
 
-        {/* Badge */}
+        {/* BADGE */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,7 +35,7 @@ transition={{
           </span>
         </motion.div>
 
-        {/* Main Headline */}
+        {/* MAIN HEADING */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,46 +46,38 @@ transition={{
           <span className="text-[#16A34A]">Discipline & Edge</span>
         </motion.h1>
 
-        {/* Subtext */}
+        {/* SUBTEXT */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
           className="mt-6 text-gray-400 text-lg max-w-2xl mx-auto"
         >
-          Join a focused trading community built on strategy, risk management,
-          and consistency — not hype. Learn how real traders grow accounts sustainably.
+          Learn how professional traders approach the market using structure,
+          risk management, and disciplined execution — not emotion or luck.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* CTA BUTTONS */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.7 }}
-          className="mt-10 flex flex-col md:flex-row gap-4 justify-center"
+          transition={{ delay: 0.35, duration: 0.7 }}
+          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
         >
-
           <a
-            href="#results"
-            className="px-6 py-3 rounded-xl bg-[#16A34A] text-black font-semibold hover:scale-105 transition"
-          >
-            View Results
-          </a>
-
-          <a
-            href="https://wa.me/2347048284823"
-            target="_blank"
-            className="px-6 py-3 rounded-xl border border-[#16A34A]/40 text-[#16A34A] hover:bg-[#16A34A]/10 transition"
+            href="/community"
+            className="bg-[#16A34A] text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 hover:shadow-[0_0_25px_rgba(22,163,74,0.35)] transition-all duration-300 active:scale-95"
           >
             Join Community
           </a>
 
+          <a
+            href="/services"
+            className="border border-white/20 px-8 py-4 rounded-2xl hover:border-[#16A34A] hover:text-[#16A34A] transition-all duration-300"
+          >
+            Explore Services
+          </a>
         </motion.div>
-
-        {/* Trust Line */}
-        <p className="mt-8 text-sm text-gray-500">
-          Built for traders who want consistency, not gambling.
-        </p>
 
       </div>
     </section>
