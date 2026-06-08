@@ -12,6 +12,13 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-5xl mx-auto text-center">
+        animate={{
+  opacity: [0.3, 0.5, 0.3],
+}}
+transition={{
+  duration: 6,
+  repeat: Infinity,
+}}
 
         {/* Badge */}
         <motion.div
