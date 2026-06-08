@@ -49,7 +49,7 @@ export default function CTA() {
         <div className="mt-10 flex flex-wrap justify-center gap-4">
 
           <Link
-            href="https://wa.me/YOUR_NUMBER"
+            href="https://wa.me/2347048282823"
             className="bg-[#16A34A] px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20"
           >
             Join on WhatsApp
