@@ -1,85 +1,193 @@
-export default function CommunityPage() {
-  return (
-    <main className="min-h-screen px-6 py-24">
+"use client";
 
-      <div className="max-w-5xl mx-auto text-center">
+import { motion } from "framer-motion";
+
+export default function CommunityPage() {
+  const benefits = [
+    {
+      icon: "📈",
+      title: "Daily Trade Ideas",
+      description:
+        "Receive structured market setups, directional bias, and trade opportunities.",
+    },
+    {
+      icon: "🧠",
+      title: "Market Breakdown",
+      description:
+        "Learn how experienced traders analyze structure and identify high-probability zones.",
+    },
+    {
+      icon: "⚡",
+      title: "Trader Psychology",
+      description:
+        "Develop discipline, patience, and emotional control in volatile market conditions.",
+    },
+  ];
+
+  return (
+    <main className="min-h-screen bg-[#050505] text-white px-6 py-24">
+
+      <div className="max-w-6xl mx-auto">
 
         {/* HERO */}
-        <h1 className="text-4xl md:text-6xl font-bold">
-          Join the Trader Kachi Community
-        </h1>
+        <section className="text-center">
 
-        <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">
-          A focused trading environment where discipline, structure, and consistency
-          are built daily.
-        </p>
+          <p className="text-[#16A34A] uppercase tracking-widest text-sm mb-3">
+            Trader Kachi Community
+          </p>
+
+          <h1 className="text-4xl md:text-6xl font-bold">
+            Trade With
+            <span className="text-[#16A34A]"> Structure</span>,
+            Not Emotion
+          </h1>
+
+          <p className="text-gray-400 mt-6 max-w-3xl mx-auto text-lg">
+            Join a focused ecosystem of traders committed to discipline,
+            consistency, and long-term growth.
+          </p>
+
+        </section>
+
+        {/* STATS */}
+        <section className="mt-20">
+
+          <div className="grid md:grid-cols-3 gap-6">
+
+            <div className="bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 text-center">
+              <h3 className="text-4xl font-bold text-[#16A34A]">
+                Daily
+              </h3>
+
+              <p className="text-gray-400 mt-2">
+                Market Analysis
+              </p>
+            </div>
+
+            <div className="bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 text-center">
+              <h3 className="text-4xl font-bold text-[#16A34A]">
+                24/7
+              </h3>
+
+              <p className="text-gray-400 mt-2">
+                Community Access
+              </p>
+            </div>
+
+            <div className="bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 text-center">
+              <h3 className="text-4xl font-bold text-[#16A34A]">
+                Focused
+              </h3>
+
+              <p className="text-gray-400 mt-2">
+                Learning Environment
+              </p>
+            </div>
+
+          </div>
+
+        </section>
 
         {/* BENEFITS */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6 text-left">
+        <section className="mt-24">
 
-          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:border-[#16A34A] hover:bg-[#16A34A]/10 hover:-translate-y-2">
-            <h3 className="font-semibold text-lg mb-2">Daily Trade Ideas</h3>
-            <p className="text-gray-400 text-sm">
-              Get structured setups and market direction updates.
+          <div className="text-center mb-12">
+
+            <p className="text-[#16A34A] uppercase tracking-widest text-sm mb-3">
+              What You Get
             </p>
+
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Inside The Community
+            </h2>
+
           </div>
 
-          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:border-[#16A34A] hover:bg-[#16A34A]/10 hover:-translate-y-2">
-            <h3 className="font-semibold text-lg mb-2">Market Breakdown</h3>
-            <p className="text-gray-400 text-sm">
-              Learn how to read structure and understand price action.
-            </p>
+          <div className="grid md:grid-cols-3 gap-8">
+
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.15,
+                }}
+                className="bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 hover:border-[#16A34A]/40 transition"
+              >
+
+                <div className="w-14 h-14 rounded-2xl bg-[#16A34A]/10 flex items-center justify-center text-2xl mb-6">
+                  {benefit.icon}
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">
+                  {benefit.title}
+                </h3>
+
+                <p className="text-gray-400 leading-relaxed">
+                  {benefit.description}
+                </p>
+
+              </motion.div>
+            ))}
+
           </div>
 
-          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:border-[#16A34A] hover:bg-[#16A34A]/10 hover:-translate-y-2">
-            <h3 className="font-semibold text-lg mb-2">Trader Psychology</h3>
-            <p className="text-gray-400 text-sm">
-              Build discipline and remove emotional trading habits.
-            </p>
-          </div>
+        </section>
 
-        </div>
+        {/* TESTIMONIAL */}
+        <section className="mt-24">
 
-        {/* SOCIAL PROOF */}
-        <div className="mt-20">
+          <div className="bg-[#0A0A0A] border border-white/10 rounded-3xl p-12 text-center">
 
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
-
-            <p className="text-gray-300 italic">
-              “Before joining, I was inconsistent and emotional. Now I finally understand structure and patience.”
+            <p className="text-xl italic text-gray-300 max-w-3xl mx-auto">
+              "Before joining, I was constantly overtrading and chasing setups.
+              The community helped me develop patience and a clear process."
             </p>
 
-            <p className="mt-4 text-[#16A34A] font-medium">
+            <p className="mt-6 text-[#16A34A] font-medium">
               — Community Member
             </p>
 
           </div>
 
-        </div>
+        </section>
 
-        {/* CTA SECTION */}
-        <div className="mt-20">
+        {/* CTA */}
+        <section className="mt-24">
 
-          <h2 className="text-2xl md:text-3xl font-bold">
-            Ready to start trading with structure?
-          </h2>
+          <div className="bg-[#0A0A0A] border border-white/10 rounded-3xl p-12 text-center">
 
-          <p className="text-gray-400 mt-4">
-            Join the community and start learning how professionals approach the market.
-          </p>
+            <p className="text-[#16A34A] uppercase tracking-widest text-sm mb-3">
+              Join Today
+            </p>
 
-          <a
-            href="https://wa.me/2347048284823"
-            target="_blank"
-            className="inline-block mt-8 bg-[#16A34A] px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-500/30"
-          >
-            Join on WhatsApp
-          </a>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Ready To Trade Like A Professional?
+            </h2>
 
-        </div>
+            <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+              Become part of a trading environment focused on growth,
+              accountability, and disciplined execution.
+            </p>
+
+            <a
+              href="https://wa.me/2347048284823"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-8 bg-[#16A34A] text-black px-8 py-4 rounded-2xl font-semibold transition hover:scale-105"
+            >
+              Join on WhatsApp
+            </a>
+
+          </div>
+
+        </section>
 
       </div>
 
     </main>
   );
-}
+                  }
