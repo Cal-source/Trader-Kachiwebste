@@ -1,76 +1,149 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function AboutPage() {
   return (
-    <main className="min-h-screen px-6 py-24">
+    <main className="min-h-screen bg-[#050505] text-white px-6 py-24">
 
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
 
-        <h1 className="text-4xl md:text-6xl font-bold text-center">
-          About Trader Kachi
-        </h1>
+        {/* HEADER */}
+        <div className="text-center">
 
-        <p className="text-gray-400 text-center mt-6 max-w-2xl mx-auto">
-          A structured trading ecosystem focused on discipline, strategy,
-          and long-term consistency in the financial markets.
-        </p>
-
-        <section className="mt-16 space-y-6 text-gray-300 leading-relaxed">
-
-          <p>
-            Trader Kachi was built with one goal — to help traders move from
-            inconsistent emotional trading to structured, professional-level execution.
+          <p className="text-[#16A34A] uppercase tracking-widest text-sm mb-3">
+            About Trader Kachi
           </p>
 
-          <p>
-            Most traders fail not because the market is random, but because
-            they lack discipline, structure, and proper risk management.
+          <h1 className="text-4xl md:text-6xl font-bold">
+            Built For Traders Who
+            <span className="text-[#16A34A]"> Want Structure</span>
+          </h1>
+
+          <p className="text-gray-400 mt-6 max-w-3xl mx-auto text-lg">
+            Trader Kachi is a structured trading ecosystem focused on
+            discipline, risk management, and long-term consistency.
+            Our goal is simple: help traders stop gambling and start
+            operating with a repeatable process.
           </p>
-
-          <p>
-            This platform focuses on simplifying trading into a repeatable system
-            that prioritizes consistency over excitement.
-          </p>
-
-        </section>
-
-        <section className="mt-16 grid md:grid-cols-3 gap-6">
-
-          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:border-[#16A34A] hover:bg-[#16A34A]/10 hover:-translate-y-2">
-            <h3 className="font-semibold text-lg mb-2">Discipline</h3>
-            <p className="text-gray-400 text-sm">
-              We prioritize structure over emotional decision making.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:border-[#16A34A] hover:bg-[#16A34A]/10 hover:-translate-y-2">
-            <h3 className="font-semibold text-lg mb-2">Consistency</h3>
-            <p className="text-gray-400 text-sm">
-              Small wins repeated over time create real results.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:border-[#16A34A] hover:bg-[#16A34A]/10 hover:-translate-y-2">
-            <h3 className="font-semibold text-lg mb-2">Education</h3>
-            <p className="text-gray-400 text-sm">
-              We focus on understanding the market, not gambling it.
-            </p>
-          </div>
-
-        </section>
-
-        <div className="text-center mt-20">
-
-          <h2 className="text-2xl font-semibold">
-            Ready to start your trading journey?
-          </h2>
-
-          <a
-            href="/community"
-            className="inline-block mt-6 bg-[#16A34A] px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-green-600 hover:scale-105 hover:shadow-lg hover:shadow-green-500/30"
-          >
-            Join Community
-          </a>
 
         </div>
+
+        {/* STORY */}
+        <section className="mt-24 max-w-4xl mx-auto">
+
+          <h2 className="text-3xl font-bold mb-6">
+            Why Trader Kachi Exists
+          </h2>
+
+          <div className="space-y-6 text-gray-300 leading-relaxed">
+
+            <p>
+              Most traders do not fail because the market is impossible.
+              They fail because they lack structure, discipline,
+              and proper risk management.
+            </p>
+
+            <p>
+              Trader Kachi was created to bridge that gap by helping traders
+              develop a professional approach to the markets rather than
+              relying on emotions, hype, or random signals.
+            </p>
+
+            <p>
+              Every lesson, analysis, and community interaction is built
+              around one principle:
+              consistency beats excitement.
+            </p>
+
+          </div>
+
+        </section>
+
+        {/* VALUES */}
+        <section className="mt-24">
+
+          <div className="text-center mb-12">
+
+            <p className="text-[#16A34A] uppercase tracking-widest text-sm mb-3">
+              Core Principles
+            </p>
+
+            <h2 className="text-3xl md:text-4xl font-bold">
+              The Foundation Of The System
+            </h2>
+
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+
+            <motion.div
+              whileHover={{ y: -6 }}
+              className="bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 hover:border-[#16A34A]/40 transition"
+            >
+              <h3 className="text-xl font-semibold mb-4">
+                Discipline
+              </h3>
+
+              <p className="text-gray-400">
+                Structured decisions outperform emotional reactions.
+              </p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -6 }}
+              className="bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 hover:border-[#16A34A]/40 transition"
+            >
+              <h3 className="text-xl font-semibold mb-4">
+                Consistency
+              </h3>
+
+              <p className="text-gray-400">
+                Sustainable growth comes from repeatable execution.
+              </p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -6 }}
+              className="bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 hover:border-[#16A34A]/40 transition"
+            >
+              <h3 className="text-xl font-semibold mb-4">
+                Education
+              </h3>
+
+              <p className="text-gray-400">
+                Understanding the market is more valuable than chasing signals.
+              </p>
+            </motion.div>
+
+          </div>
+
+        </section>
+
+        {/* CTA */}
+        <section className="mt-24">
+
+          <div className="bg-[#0A0A0A] border border-white/10 rounded-3xl p-12 text-center">
+
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Ready To Trade With Structure?
+            </h2>
+
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+              Join a community focused on discipline, execution,
+              and long-term trader development.
+            </p>
+
+            <a
+              href="/community"
+              className="inline-block mt-8 bg-[#16A34A] text-black px-8 py-4 rounded-2xl font-semibold transition hover:scale-105"
+            >
+              Join Community
+            </a>
+
+          </div>
+
+        </section>
 
       </div>
 
