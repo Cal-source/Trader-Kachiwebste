@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -15,52 +16,146 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-[9999] border-b border-white/10 bg-black/70 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 w-full z-[9999] border-b border-white/10 bg-black/80 backdrop-blur-xl">
+
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-        {/* Logo */}
-        <Link href="/" className="text-lg md:text-xl font-bold text-primary">
-  Trader Kachi
-</Link>
+        {/* LOGO */}
+        <motion.div
+          whileHover={{ scale: 1.03 }}
+        >
+          <Link
+            href="/"
+            className="text-xl font-bold text-white"
+          >
+            Trader{" "}
+            <span className="text-[#16A34A]">
+              Kachi
+            </span>
+          </Link>
+        </motion.div>
 
-        {/* Desktop Nav */}
+        {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8">
+
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm text-gray-300 hover:text-white transition-colors"
+              className="
+                text-sm
+                text-gray-400
+                hover:text-white
+                transition-colors
+                duration-300
+              "
             >
               {link.name}
             </Link>
           ))}
+
         </nav>
 
-        {/* Mobile Button */}
+        {/* DESKTOP CTA */}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="hidden md:block"
+        >
+          <Link
+            href="/community"
+            className="
+              bg-[#16A34A]
+              text-black
+              px-5
+              py-2.5
+              rounded-xl
+              font-semibold
+              transition-all
+              duration-300
+              hover:shadow-[0_0_25px_rgba(22,163,74,0.35)]
+            "
+          >
+            Join Community
+          </Link>
+        </motion.div>
+
+        {/* MOBILE BUTTON */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white text-sm px-4 py-2 rounded-md bg-black/70 border border-white/30"
+          className="
+            md:hidden
+            border
+            border-white/10
+            bg-[#0A0A0A]
+            px-4
+            py-2
+            rounded-xl
+            text-white
+            transition
+          "
         >
-          {isOpen ? "Close" : "Menu"}
+          {isOpen ? "✕" : "☰"}
         </button>
 
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden border-t border-white/10 bg-black/95 px-6 py-6 flex flex-col gap-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-gray-300 hover:text-white text-lg"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-      )}
+      {/* MOBILE MENU */}
+      <AnimatePresence>
+
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.2 }}
+            className="
+              md:hidden
+              border-t
+              border-white/10
+              bg-[#050505]
+            "
+          >
+            <div className="flex flex-col px-6 py-6 gap-6">
+
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="
+                    text-gray-300
+                    hover:text-[#16A34A]
+                    transition-colors
+                    text-lg
+                  "
+                >
+                  {link.name}
+                </Link>
+              ))}
+
+              <Link
+                href="/community"
+                onClick={() => setIsOpen(false)}
+                className="
+                  mt-2
+                  text-center
+                  bg-[#16A34A]
+                  text-black
+                  py-3
+                  rounded-xl
+                  font-semibold
+                "
+              >
+                Join Community
+              </Link>
+
+            </div>
+          </motion.div>
+        )}
+
+      </AnimatePresence>
+
     </header>
   );
-}
+      }
