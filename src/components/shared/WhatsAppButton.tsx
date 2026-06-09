@@ -4,7 +4,9 @@ import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppButton() {
   const phoneNumber = "2347048284823";
-  const message = "Hi, I'm interested in Trader Kachi.";
+
+  const message =
+    "Hi Trader Kachi, I'm interested in learning more about your mentorship and community.";
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
@@ -15,58 +17,106 @@ export default function WhatsAppButton() {
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group"
+      aria-label="Chat on WhatsApp"
+      className="fixed bottom-6 right-6 z-[9999] group"
     >
-      {/* OUTER GLOW RING */}
-      <div className="absolute inset-0 rounded-full bg-[#16A34A] opacity-30 blur-xl group-hover:opacity-50 transition" />
+      {/* OUTER GLOW */}
+      <div
+        className="
+        absolute
+        inset-0
+        rounded-full
+        bg-[#16A34A]
+        blur-2xl
+        opacity-25
+        group-hover:opacity-50
+        transition-all
+        duration-500
+        "
+      />
 
-      {/* PULSE RING (SOFTER) */}
-      <span className="absolute inline-flex h-full w-full rounded-full bg-[#16A34A] opacity-20 animate-ping" />
+      {/* PULSE RING */}
+      <span
+        className="
+        absolute
+        inset-0
+        rounded-full
+        border
+        border-[#16A34A]/40
+        animate-ping
+        "
+      />
 
-      {/* MAIN BUTTON */}
+      {/* BUTTON */}
       <div
         className="
         relative
         flex
         items-center
         justify-center
-        w-14
-        h-14
+        w-16
+        h-16
         rounded-full
         bg-[#16A34A]
-        shadow-[0_0_20px_rgba(22,163,74,0.35)]
-        hover:shadow-[0_0_35px_rgba(22,163,74,0.55)]
+        shadow-[0_0_30px_rgba(22,163,74,0.35)]
+        hover:shadow-[0_0_45px_rgba(22,163,74,0.55)]
         hover:scale-110
         active:scale-95
         transition-all
         duration-300
         "
       >
-        <MessageCircle className="w-6 h-6 text-black" />
+        <MessageCircle className="w-7 h-7 text-black" />
+
+        {/* ONLINE DOT */}
+        <span
+          className="
+          absolute
+          top-1
+          right-1
+          w-3
+          h-3
+          rounded-full
+          bg-white
+          border-2
+          border-[#16A34A]
+          "
+        />
       </div>
 
       {/* TOOLTIP */}
       <div
         className="
         absolute
-        right-16
+        right-20
         bottom-3
-        hidden
-        group-hover:block
-        bg-[#0A0A0A]
-        text-white
-        text-xs
-        px-3
-        py-1.5
-        rounded-md
-        whitespace-nowrap
-        border
-        border-white/10
-        backdrop-blur-md
+        opacity-0
+        translate-x-2
+        group-hover:opacity-100
+        group-hover:translate-x-0
+        transition-all
+        duration-300
+        pointer-events-none
         "
       >
-        Chat on WhatsApp
+        <div
+          className="
+          bg-[#0A0A0A]
+          border
+          border-white/10
+          backdrop-blur-xl
+          text-white
+          px-4
+          py-2
+          rounded-xl
+          text-sm
+          whitespace-nowrap
+          shadow-lg
+          "
+        >
+          Chat with Trader Kachi
+        </div>
       </div>
     </a>
   );
-}
+      }
