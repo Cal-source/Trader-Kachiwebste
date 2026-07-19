@@ -1,3 +1,4 @@
+import {ClerkProvider} from "@clerk/nextjs";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
@@ -15,20 +16,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-background text-white">
+        <ClerkProvider>
+          {/* NAVBAR */}
+          <Navbar />
 
-        {/* NAVBAR */}
-        <Navbar />
-
-        {/* PAGE CONTENT */}
-        <main className="pt-24">
+          {/* PAGE CONTENT */}
+          <main className="pt-24">
           {children}
-        </main>
+          </main>
 
-        {/* FLOATING WHATSAPP BUTTON */}
-        <WhatsAppButton />
-        
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async></script>
+          {/* FLOATING WHATSAPP BUTTON */}
+          <WhatsAppButton />
 
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async></script>
+        </ClerkProvider>
       </body>
     </html>
   );
