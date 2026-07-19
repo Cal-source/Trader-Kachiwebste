@@ -9,7 +9,8 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Results", href: "/results" },
-  { name: "Community", href: "/community" },
+  { name: "Trading OS", href: "/dashboard" },
+  { name: "Community", href: "/community" }
 ];
 
 export default function Navbar() {
@@ -39,20 +40,18 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-8">
 
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="
-                text-sm
-                text-gray-400
-                hover:text-white
-                transition-colors
-                duration-300
-              "
-            >
-              {link.name}
-            </Link>
-          ))}
+  <Link
+    key={link.name}
+    href={link.href}
+    className={`text-sm transition-colors duration-300 ${
+      link.name === "Trading OS"
+        ? "text-[#16A34A] font-semibold hover:text-white"
+        : "text-gray-400 hover:text-white"
+    }`}
+  >
+    {link.name}
+  </Link>
+))}
 
         </nav>
 

@@ -8,6 +8,7 @@ export default function DashboardPage() {
 
       <p className="text-gray-400 mt-3">
         Welcome to your Trading Dashboard.
+        Version 1.0 Beta
       </p>
 
     </div>

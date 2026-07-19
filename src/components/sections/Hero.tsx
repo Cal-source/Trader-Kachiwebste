@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Link } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -77,6 +78,13 @@ export default function Hero() {
           >
             Explore Services
           </a>
+
+          <a
+  href="/dashboard"
+  className="inline-block mt-6 text-sm text-[#16A34A] hover:text-white transition"
+>
+  Already a member? Open Trading OS →
+</a>
         </motion.div>
 
       </div>
