@@ -14,3 +14,14 @@
 - Dashboard architecture
 - Sidebar
 - Topbar
+
+# Changelog
+
+## v2.0.1 - Sprint 2.3
+
+### Added
+- Prisma 7 configured
+- Neon PostgreSQL connected
+- Initial User database model
+- First database migration created
+- Project documentation structure
