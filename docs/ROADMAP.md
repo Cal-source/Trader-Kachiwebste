@@ -71,3 +71,10 @@
 - [ ] AI Trade Review
 - [ ] AI Journal Analysis
 - [ ] AI Performance Insights
+
+## Backend Foundation
+
+- [x] Prisma Installed
+- [x] Neon Database Connected
+- [x] User Model
+- [x] First Migration
