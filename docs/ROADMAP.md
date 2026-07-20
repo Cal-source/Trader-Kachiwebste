@@ -78,3 +78,43 @@
 - [x] Neon Database Connected
 - [x] User Model
 - [x] First Migration
+
+
+
+## Sprint 2.4 — Authentication & User Foundation (In Progress)
+
+### ✅ Completed
+- Upgraded project to Next.js 16
+- Upgraded to React 19
+- Integrated Prisma with Neon PostgreSQL
+- Initialized database migrations
+- Integrated Clerk SDK
+- Created Sign In and Sign Up pages
+- Added ClerkProvider to the application
+
+### 🚧 In Progress
+- Configure Clerk route protection
+- Protect dashboard routes only
+- Keep marketing website fully public
+- Implement role-based user architecture
+
+### ⏳ Upcoming
+- Clerk → Prisma user synchronization
+- User roles (ADMIN, USER, PREMIUM)
+- Protected dashboard layout
+
+
+
+
+## Architecture Decisions
+
+### AD-001
+The marketing website remains completely public.
+
+Reason:
+The public pages should be indexable by search engines and accessible without authentication.
+
+Only the dashboard will require authentication.
+
+Status:
+Accepted

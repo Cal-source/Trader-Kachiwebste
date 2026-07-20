@@ -2,8 +2,12 @@ import {ClerkProvider} from "@clerk/nextjs";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
+import Script from "next/script";
 
-export const metadata = {
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Trader Kachi",
   description: "Elite Forex Mentorship Nigeria",
 };
@@ -28,7 +32,10 @@ export default function RootLayout({
           {/* FLOATING WHATSAPP BUTTON */}
           <WhatsAppButton />
 
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async></script>
+          <Script
+  src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+  strategy="afterInteractive"
+/>
         </ClerkProvider>
       </body>
     </html>
