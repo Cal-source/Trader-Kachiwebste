@@ -2,7 +2,6 @@ import {ClerkProvider} from "@clerk/nextjs";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
-import Script from "next/script";
 
 
 import type { Metadata } from "next";
@@ -31,11 +30,6 @@ export default function RootLayout({
 
           {/* FLOATING WHATSAPP BUTTON */}
           <WhatsAppButton />
-
-          <Script
-  src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
-  strategy="afterInteractive"
-/>
         </ClerkProvider>
       </body>
     </html>

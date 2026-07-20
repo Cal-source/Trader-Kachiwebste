@@ -45,7 +45,7 @@ export default function Footer() {
             </p>
 
             <a
-              href="https://wa.me/YOUR_NUMBER"
+              href="https://wa.me/2347048284823"
               className="inline-block bg-[#16A34A] text-black px-5 py-3 rounded-xl font-semibold hover:scale-105 transition"
             >
               Join on WhatsApp
