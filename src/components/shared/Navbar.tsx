@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import TraderKachiLogo from "@/components/shared/TraderKachilogo";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -22,19 +23,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
         {/* LOGO */}
-        <motion.div
-          whileHover={{ scale: 1.03 }}
-        >
-          <Link
-            href="/"
-            className="text-xl font-bold text-white"
-          >
-            Trader{" "}
-            <span className="text-[#16A34A]">
-              Kachi
-            </span>
-          </Link>
-        </motion.div>
+<motion.div
+  whileHover={{ scale: 1.03 }}
+>
+  <TraderKachiLogo />
+</motion.div>
 
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8">
