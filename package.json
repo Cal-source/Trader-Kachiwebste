@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx",
     "type-check": "tsc --noEmit",
-    "start:dev": "git pull origin main && npm install && npm run dev"
+    "start:dev": "git pull origin main && npm install && npm run dev",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@clerk/nextjs": "^7.5.20",
