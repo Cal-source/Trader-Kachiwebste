@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import TraderKachiLogo from "@/components/shared/TraderKachilogo";
+import TraderKachiLogo from "@/components/shared/TraderKachiLogo";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -11,7 +11,7 @@ const navLinks = [
   { name: "Services", href: "/services" },
   { name: "Results", href: "/results" },
   { name: "Trading OS", href: "/dashboard" },
-  { name: "Community", href: "/community" }
+  { name: "Community", href: "/community" },
 ];
 
 export default function Navbar() {

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 
+
 export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">

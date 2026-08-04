@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import TraderKachiLogo from "@/components/shared/TraderKachiLogo";
 
 import {
   LayoutDashboard,
@@ -49,37 +50,37 @@ export default function Sidebar() {
       className="h-screen bg-[#050505] border-r border-white/10 flex flex-col overflow-hidden"
     >
       {/* Logo */}
-      <div className="px-6 py-6 border-b border-white/10">
-        <div className="flex items-center justify-between">
-          {!collapsed ? (
-            <div>
-              <h1 className="text-2xl font-bold">
-                Trader <span className="text-[#16A34A]">Kachi</span>
-              </h1>
+<div className="px-5 py-6 border-b border-white/10">
 
-              <p className="text-sm text-gray-500 mt-1">
-                Trading OS
-              </p>
-            </div>
-          ) : (
-            <div className="text-2xl font-bold text-[#16A34A]">
-              TK
-            </div>
-          )}
+  <div className="flex items-center justify-between">
 
-          <button
-            onClick={() => setCollapsed(!collapsed)}
-            className="rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition"
-          >
-            {collapsed ? (
-              <PanelLeftOpen size={18} />
-            ) : (
-              <PanelLeftClose size={18} />
-            )}
-          </button>
-        </div>
-      </div>
+    <TraderKachiLogo
+      size={38}
+      showText={!collapsed}
+    />
 
+    <button
+      onClick={() => setCollapsed(!collapsed)}
+      className="
+      rounded-xl
+      border
+      border-white/10
+      bg-white/5
+      p-2
+      hover:bg-white/10
+      transition
+      "
+    >
+      {collapsed ? (
+        <PanelLeftOpen size={18} />
+      ) : (
+        <PanelLeftClose size={18} />
+      )}
+    </button>
+
+  </div>
+
+</div>
       {/* Navigation */}
       <nav className="flex-1 p-4 space-y-2">
         {links.map((link) => {
