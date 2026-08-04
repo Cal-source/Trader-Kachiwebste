@@ -26,7 +26,8 @@ const links = [
   { name: "Equity Curve", href: "/dashboard/equity", icon: LineChart },
   { name: "Risk Calculator", href: "/dashboard/risk", icon: Calculator },
   { name: "Settings", href: "/dashboard/settings", icon: Settings },
-];
+  { name: "Notes", href: "/dashboard/notes", icon: BookOpen },
+{ name: "Playbook", href: "/dashboard/Playbook", icon: BookOpen },];
 
 export default function Sidebar() {
   const pathname = usePathname();
