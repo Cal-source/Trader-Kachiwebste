@@ -20,13 +20,28 @@ export async function POST(req: Request) {
     return new Response("Missing headers", { status: 400 });
   }
 
-  const evt = new Webhook(secret).verify(body, {
-    "svix-id": svixId,
-    "svix-timestamp": svixTimestamp,
-    "svix-signature": svixSignature,
-  }) as { type: string };
+const evt = new Webhook(secret).verify(body, {
+  "svix-id": svixId,
+  "svix-timestamp": svixTimestamp,
+  "svix-signature": svixSignature,
+}) as any;
 
-  return Response.json({
-    type: evt.type,
+if (evt.type === "user.created") {
+  const user = evt.data as any;
+
+  await prisma.user.upsert({
+    where: {
+      clerkId: user.id,
+    },
+    update: {},
+    create: {
+      clerkId: user.id,
+      email: user.email_addresses[0]?.email_address ?? "",
+    },
   });
+}
+
+return Response.json({
+  success: true,
+});
 }
