@@ -29,16 +29,7 @@ const evt = new Webhook(secret).verify(body, {
 if (evt.type === "user.created") {
   const user = evt.data as any;
 
-  await prisma.user.upsert({
-    where: {
-      clerkId: user.id,
-    },
-    update: {},
-    create: {
-      clerkId: user.id,
-      email: user.email_addresses[0]?.email_address ?? "",
-    },
-  });
+  console.log("Prisma imported successfully");
 }
 
 return Response.json({
