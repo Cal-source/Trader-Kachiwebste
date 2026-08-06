@@ -10,7 +10,6 @@ export async function POST(req: Request) {
   }
 
   const body = await req.text();
-
   const headerList = await headers();
 
   const svixId = headerList.get("svix-id");
@@ -21,7 +20,13 @@ export async function POST(req: Request) {
     return new Response("Missing headers", { status: 400 });
   }
 
+  const evt = new Webhook(secret).verify(body, {
+    "svix-id": svixId,
+    "svix-timestamp": svixTimestamp,
+    "svix-signature": svixSignature,
+  }) as { type: string };
+
   return Response.json({
-    ok: true,
+    type: evt.type,
   });
 }
