@@ -1,4 +1,4 @@
-import { verifyWebhook } from "@clerk/nextjs/webhooks";
+import { verifyWebhook } from "@clerk/backend/webhooks";
 import { prisma } from "@/lib/prisma";
 
 export async function POST(req: Request) {
